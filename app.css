@@ -1,18 +1,22 @@
 /* ==========================================================================
-   El Secreto Femenino - Exact Husky App UI Replica
+   El Secreto - Ultra-Luxury Netflix Cinema Design System (Glassmorphic)
    ========================================================================== */
 
 :root {
-  --husky-red-header: #900000;
-  --husky-bg-dark-red: #4a0004;
-  --husky-card-black: #0c0c0e;
-  --husky-card-footer: #212836;
-  --husky-neon-pink: #ff1f71;
-  --husky-neon-glow: rgba(255, 31, 113, 0.75);
+  --netflix-black: #141414;
+  --netflix-dark-gray: #181818;
+  --netflix-card-bg: #1a1a20;
+  --netflix-red: #e50914;
+  --netflix-red-hover: #f40612;
+  --netflix-red-glow: rgba(229, 9, 20, 0.55);
+  --gold-accent: #ffd700;
 
-  --font-script: 'Great Vibes', cursive;
-  --font-title: 'Montserrat', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;
+  --text-muted: #777777;
+
+  --font-netflix: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 * {
@@ -23,278 +27,370 @@
 }
 
 body {
-  background-color: var(--husky-bg-dark-red);
-  color: #ffffff;
-  font-family: var(--font-body);
+  background-color: var(--netflix-black);
+  color: var(--text-white);
+  font-family: var(--font-netflix);
   line-height: 1.4;
-  min-height: 100vh;
-  padding-bottom: 75px;
+  overflow-x: hidden;
+  padding-bottom: 70px;
 }
 
-/* Husky Header */
-.husky-header {
-  position: sticky;
+/* Navbar */
+.netflix-nav {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
-  background-color: var(--husky-red-header);
+  height: 68px;
   z-index: 1000;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.husky-header-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding: 0 4%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
+  transition: background 0.3s ease;
 }
 
-.husky-logo-wrap {
+.netflix-nav.scrolled {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.9);
+}
+
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 28px;
 }
 
-.husky-logo-circle {
-  width: 40px;
-  height: 40px;
-  background: #000000;
+.netflix-logo {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--netflix-red);
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px var(--netflix-red-glow);
+  white-space: nowrap;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-input-box {
+  position: relative;
+}
+
+.search-input-box input {
+  background: rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 8px 14px 8px 36px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  outline: none;
+  width: 190px;
+  transition: width 0.3s, border-color 0.3s;
+}
+
+.search-input-box input:focus {
+  width: 250px;
+  border-color: var(--netflix-red);
+}
+
+.search-input-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* Billboard Hero */
+.billboard {
+  position: relative;
+  height: 68vh;
+  min-height: 460px;
+  background-image: url('https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__fe8179ce-9c76-4c7f-8c2c-86fa20767d3b.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 4%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.billboard-bg-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 35%, rgba(229,9,20,0.35) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.billboard-content {
+  max-width: 680px;
+  z-index: 2;
+  margin-top: 30px;
+}
+
+.billboard-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--netflix-red);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.billboard-title {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  text-shadow: 2px 2px 14px rgba(0,0,0,0.9);
+}
+
+.billboard-desc {
+  font-size: 1.05rem;
+  color: #d2d2d2;
+  margin-bottom: 26px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+}
+
+.billboard-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-netflix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-netflix-primary {
+  background: #ffffff;
+  color: #000000;
+}
+.btn-netflix-primary:hover {
+  background: rgba(255,255,255,0.85);
+  transform: scale(1.03);
+}
+
+.btn-netflix-secondary {
+  background: rgba(109, 109, 110, 0.7);
+  color: #ffffff;
+}
+.btn-netflix-secondary:hover {
+  background: rgba(109, 109, 110, 0.4);
+  transform: scale(1.03);
+}
+
+/* Rows & Large Cinematic Cards */
+.rows-container {
+  padding: 0 4%;
+  margin-top: -45px;
+  position: relative;
+  z-index: 10;
+}
+
+.row-section {
+  margin-bottom: 40px;
+}
+
+.row-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-slider {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 12px 4px 22px 4px;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+.row-slider::-webkit-scrollbar { display: none; }
+
+/* Photorealistic Card Postering */
+.netflix-card {
+  flex: 0 0 340px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: var(--netflix-card-bg);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+  scroll-snap-align: start;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.netflix-card:hover {
+  transform: scale(1.06) translateY(-4px);
+  z-index: 100;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.95), 0 0 25px var(--netflix-red-glow);
+  border-color: var(--netflix-red);
+}
+
+.card-poster {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.card-poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+  z-index: 1;
+}
+
+.card-top-tag {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  background: rgba(0,0,0,0.8);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--gold-accent);
+  border: 1px solid rgba(255,215,0,0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.card-info {
+  position: relative;
+  z-index: 2;
+}
+
+.card-info h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
+
+.card-info-meta {
+  font-size: 0.78rem;
+  color: #46d369;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-hd-badge {
+  color: #fff;
+  font-size: 0.65rem;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 54px;
+  height: 54px;
+  background: rgba(229, 9, 20, 0.95);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 8px rgba(0,0,0,0.8);
-}
-
-.husky-logo-s {
-  font-family: var(--font-script);
-  font-size: 1.8rem;
-  color: var(--husky-neon-pink);
-  line-height: 1;
-}
-
-.husky-app-title {
-  font-family: var(--font-script);
-  font-size: 1.6rem;
-  color: #ffffff;
-  font-weight: 400;
-}
-
-.husky-header-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.search-box {
-  position: relative;
-}
-
-.search-box input {
-  background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
-  padding: 6px 12px 6px 32px;
-  border-radius: 18px;
-  font-size: 0.82rem;
-  outline: none;
-  width: 150px;
-  transition: width 0.3s;
+  font-size: 1.3rem;
+  opacity: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 25px var(--netflix-red);
+  z-index: 5;
 }
 
-.search-box input:focus {
-  width: 200px;
-  border-color: var(--husky-neon-pink);
+.netflix-card:hover .card-play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.search-box i {
+/* Card Progress Bar (Netflix Red Style) */
+.card-progress-bar-wrap {
   position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ccc;
-  font-size: 0.8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  z-index: 10;
 }
 
-.icon-btn {
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 6px;
-  transition: color 0.2s;
+.card-progress-bar-fill {
+  height: 100%;
+  background: var(--netflix-red);
+  box-shadow: 0 0 8px var(--netflix-red);
 }
 
-.icon-btn:hover {
-  color: var(--husky-neon-pink);
-}
-
-/* Category Filter Bar */
-.categories-bar {
-  max-width: 1200px;
-  margin: 16px auto 0 auto;
-  padding: 0 16px;
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.categories-bar::-webkit-scrollbar { display: none; }
-
-.cat-tab {
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: #d1d1d1;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s;
-}
-
-.cat-tab.active, .cat-tab:hover {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  font-weight: 700;
-}
-
-/* Modules Grid Container */
-.modules-grid-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 16px;
-}
-
-.husky-modules-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media (min-width: 900px) {
-  .husky-modules-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .husky-modules-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Husky Module Card (Exact Match to Screenshot) */
-.husky-card {
-  background: var(--husky-card-black);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.husky-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 14px 35px rgba(0,0,0,0.8), 0 0 20px var(--husky-neon-glow);
-  border-color: var(--husky-neon-pink);
-}
-
-/* Card Poster Display Area */
-.husky-card-poster {
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  background-color: #09090b;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(255,31,113,0.12) 0%, transparent 70%),
-    radial-gradient(circle at 20% 20%, rgba(30,30,40,0.8) 0%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Subtle Wave Overlay */
-.husky-card-poster::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(20,20,30,0.6) 0%, rgba(5,5,8,0.95) 100%);
-  pointer-events: none;
-}
-
-.husky-poster-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.husky-script-title {
-  font-family: var(--font-script);
-  font-size: 2.1rem;
-  color: #ffffff;
-  line-height: 1.1;
-  margin-bottom: 8px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
-  font-weight: 400;
-}
-
-.husky-neon-title {
-  font-family: var(--font-title);
-  font-weight: 900;
-  font-size: 1.35rem;
-  color: var(--husky-neon-pink);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  line-height: 1.15;
-  text-shadow: 
-    0 0 8px var(--husky-neon-pink),
-    0 0 20px var(--husky-neon-pink),
-    0 0 35px rgba(255, 31, 113, 0.6);
-  max-width: 95%;
-}
-
-/* Card Bottom Footer Bar */
-.husky-card-footer {
-  background: var(--husky-card-footer);
-  padding: 12px 14px;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.husky-footer-title {
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Netflix Modal Player */
+/* Modal Player */
 .netflix-modal {
   position: fixed;
   inset: 0;
@@ -316,9 +412,9 @@ body {
 }
 
 .modal-content-box {
-  background: #18181e;
+  background: var(--netflix-dark-gray);
   width: 100%;
-  max-width: 940px;
+  max-width: 960px;
   max-height: 92vh;
   border-radius: 10px;
   overflow-y: auto;
@@ -347,7 +443,7 @@ body {
 }
 
 .modal-close-btn:hover {
-  background: var(--husky-neon-pink);
+  background: var(--netflix-red);
 }
 
 .modal-player-area {
@@ -392,9 +488,9 @@ video.netflix-player {
 }
 
 .btn-speed.active, .btn-speed:hover {
-  background: var(--husky-neon-pink);
+  background: var(--netflix-red);
   color: #fff;
-  border-color: var(--husky-neon-pink);
+  border-color: var(--netflix-red);
 }
 
 .modal-info-padding {
@@ -422,7 +518,7 @@ video.netflix-player {
 
 .episode-card:hover, .episode-card.active {
   background: #33333d;
-  border-left: 5px solid var(--husky-neon-pink);
+  border-left: 5px solid var(--netflix-red);
 }
 
 /* Bottom App Navigation Bar (Mobile Only) */
@@ -433,7 +529,7 @@ video.netflix-player {
   left: 0;
   right: 0;
   height: 60px;
-  background: rgba(18, 18, 18, 0.96);
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -460,37 +556,89 @@ video.netflix-player {
 }
 
 .app-bar-item.active, .app-bar-item:hover {
-  color: var(--husky-neon-pink);
+  color: var(--netflix-red);
 }
 
 /* MOBILE RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-  .husky-app-title {
-    font-size: 1.3rem;
+  body {
+    padding-bottom: 75px;
   }
   
-  .search-box input {
-    width: 110px;
-  }
-  .search-box input:focus {
-    width: 150px;
+  .nav-menu {
+    display: none;
   }
 
-  .husky-modules-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .netflix-logo {
+    font-size: 1.25rem;
   }
 
-  .husky-script-title {
-    font-size: 1.6rem;
+  .search-input-box input {
+    width: 140px;
+  }
+  .search-input-box input:focus {
+    width: 180px;
   }
 
-  .husky-neon-title {
-    font-size: 0.95rem;
+  .billboard {
+    height: auto;
+    min-height: 380px;
+    padding: 80px 4% 30px 4%;
   }
 
-  .husky-footer-title {
-    font-size: 0.68rem;
+  .billboard-title {
+    font-size: 2.1rem;
+  }
+
+  .billboard-desc {
+    font-size: 0.88rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .billboard-actions {
+    flex-direction: column;
+  }
+
+  .btn-netflix {
+    width: 100%;
+  }
+
+  .rows-container {
+    margin-top: -10px;
+  }
+
+  .row-title {
+    font-size: 1.15rem;
+  }
+
+  .netflix-card {
+    flex: 0 0 240px;
+    height: 145px;
+    border-radius: 8px;
+  }
+
+  .card-info h4 {
+    font-size: 0.92rem;
+  }
+
+  .card-top-tag {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+  }
+
+  .netflix-modal {
+    padding: 8px;
+  }
+
+  .modal-content-box {
+    max-height: 96vh;
+  }
+
+  .modal-info-padding {
+    padding: 16px;
   }
 
   .bottom-app-bar {

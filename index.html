@@ -3,52 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>El Secreto Femenino | Área de Miembros</title>
+  <title>El Secreto | Netflix Cinema</title>
   
-  <meta name="theme-color" content="#900000">
+  <meta name="theme-color" content="#141414">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="app.css?v=8">
+  <link rel="stylesheet" href="app.css?v=7">
 </head>
 <body>
 
-  <!-- Husky App Header -->
-  <header class="husky-header">
-    <div class="husky-header-content">
-      <div class="husky-logo-wrap">
-        <div class="husky-logo-circle">
-          <span class="husky-logo-s">S</span>
-        </div>
-        <span class="husky-app-title">El Secreto Femenino</span>
+  <!-- Netflix Navbar -->
+  <nav class="netflix-nav" id="netflixNav">
+    <div class="nav-left">
+      <a href="#" class="netflix-logo">EL SECRETO</a>
+      <ul class="nav-menu">
+        <li><a class="nav-link active" onclick="filterRow('all')">Início</a></li>
+        <li><a class="nav-link" onclick="filterRow('main')">Cursos</a></li>
+        <li><a class="nav-link" onclick="filterRow('bonus')">Bônus & VIP</a></li>
+        <li><a class="nav-link" onclick="filterRow('pdf')">E-Books</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
       </div>
-      <div class="husky-header-actions">
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="searchInput" placeholder="Buscar módulo...">
-        </div>
-        <button class="icon-btn" title="Download">
-          <i class="fa-solid fa-download"></i>
+    </div>
+  </nav>
+
+  <!-- Billboard Hero (Feature Showcase) -->
+  <header class="billboard">
+    <div class="billboard-bg-glow"></div>
+    <div class="billboard-content">
+      <div class="billboard-tag">
+        <i class="fa-solid fa-crown"></i> Comece Por Aqui
+      </div>
+      <h1 class="billboard-title">Bienvenido a El Secreto</h1>
+      <p class="billboard-desc">
+        Boas-vindas oficiais e introdução para você iniciar sua jornada com acesso completo a todos os módulos em vídeo e materiais exclusivos.
+      </p>
+      <div class="billboard-actions">
+        <button class="btn-netflix btn-netflix-primary" onclick="openCourseById('welcome_app')">
+          <i class="fa-solid fa-play"></i> Assistir Boas-Vindas
         </button>
-        <button class="icon-btn" title="Notificaciones">
-          <i class="fa-solid fa-bell"></i>
+        <button class="btn-netflix btn-netflix-secondary" onclick="openCourseById('revelando_placer')">
+          <i class="fa-solid fa-fire"></i> Revelando El Placer
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Categories Filter Bar -->
-  <nav class="categories-bar">
-    <button class="cat-tab active" onclick="filterCategory('all', this)">Todos los Módulos</button>
-    <button class="cat-tab" onclick="filterCategory('main', this)">Cursos Principales</button>
-    <button class="cat-tab" onclick="filterCategory('bonus', this)">Módulos VIP & Bónus</button>
-    <button class="cat-tab" onclick="filterCategory('pdf', this)">E-Books & Guías</button>
-  </nav>
+  <!-- Rows Container -->
+  <main class="rows-container">
 
-  <!-- Grid of Modules (Exact 1:1 Husky App Style) -->
-  <main class="modules-grid-container">
-    <div id="modulesGrid" class="husky-modules-grid"></div>
+    <!-- Row 1: Cursos Principais -->
+    <section class="row-section">
+      <h3 class="row-title">
+        <i class="fa-solid fa-trophy" style="color: var(--netflix-red);"></i>
+        Cursos Principais & Vídeo Aulas
+      </h3>
+      <div id="rowMain" class="row-slider"></div>
+    </section>
+
+    <!-- Row 2: Módulos VIP & Bônus -->
+    <section class="row-section">
+      <h3 class="row-title">
+        <i class="fa-solid fa-crown" style="color: var(--gold-accent);"></i>
+        Módulos VIP & Bônus Exclusivos
+      </h3>
+      <div id="rowBonus" class="row-slider"></div>
+    </section>
+
+    <!-- Row 3: Biblioteca de E-Books -->
+    <section class="row-section">
+      <h3 class="row-title">
+        <i class="fa-solid fa-book-open" style="color: #46d369;"></i>
+        Biblioteca de E-Books & Guias Práticos (PDF)
+      </h3>
+      <div id="rowPdf" class="row-slider"></div>
+    </section>
+
   </main>
 
   <!-- Netflix Player Modal -->
@@ -67,7 +103,7 @@
         <p id="modalCourseDesc" style="color: #aaa; margin-top: 6px; font-size: 0.88rem;"></p>
 
         <h4 style="font-size: 1.05rem; color: #fff; margin-top: 20px; font-weight: 700;">
-          Clases disponibles:
+          Aulas & Capítulos:
         </h4>
         <div id="modalEpisodeList" class="episode-list"></div>
       </div>
@@ -76,24 +112,24 @@
 
   <!-- Mobile Bottom App Bar -->
   <nav class="bottom-app-bar">
-    <a class="app-bar-item active" onclick="filterCategory('all', null)">
+    <a class="app-bar-item active" onclick="filterRow('all')">
       <i class="fa-solid fa-house"></i>
-      <span>Inicio</span>
+      <span>Início</span>
     </a>
-    <a class="app-bar-item" onclick="filterCategory('main', null)">
+    <a class="app-bar-item" onclick="filterRow('main')">
       <i class="fa-solid fa-play-circle"></i>
       <span>Cursos</span>
     </a>
-    <a class="app-bar-item" onclick="filterCategory('bonus', null)">
+    <a class="app-bar-item" onclick="filterRow('bonus')">
       <i class="fa-solid fa-gift"></i>
-      <span>Bónus</span>
+      <span>Bônus</span>
     </a>
-    <a class="app-bar-item" onclick="filterCategory('pdf', null)">
+    <a class="app-bar-item" onclick="filterRow('pdf')">
       <i class="fa-solid fa-book-open"></i>
       <span>E-Books</span>
     </a>
   </nav>
 
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
