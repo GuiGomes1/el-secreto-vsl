@@ -1,16 +1,31 @@
 /* ==========================================================================
-   El Secreto - Netflix Cinema App Engine
+   El Secreto - Netflix Cinema App Engine (Autoplay & Ordered Modules)
    ========================================================================== */
 
 const COURSES_DATA = [
+  // 1. BIENVENIDO FIRST (1 video)
+  {
+    id: "welcome_app",
+    title: "Bienvenido a El Secreto",
+    category: "main",
+    type: "video",
+    icon: "👋",
+    badge: "COMEÇAR POR AQUI",
+    bgGradient: "linear-gradient(135deg, #e50914 0%, #1a0003 100%)",
+    description: "Boas-vindas oficiais e introdução sobre como aproveitar ao máximo a plataforma.",
+    lessons: [
+      { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
+    ]
+  },
+  // 2. REVELANDO EL PLACER (8 videos)
   {
     id: "revelando_placer",
     title: "Revelando El Placer Femenino",
     category: "main",
     type: "video",
     icon: "🔥",
-    badge: "REVELANDO EL PLACER",
-    bgGradient: "linear-gradient(135deg, #e50914 0%, #300005 100%)",
+    badge: "MÓDULO PRINCIPAL",
+    bgGradient: "linear-gradient(135deg, #880015 0%, #200005 100%)",
     description: "Dominando os segredos do prazer com técnicas passo a passo de toque e conexão.",
     lessons: [
       { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__BIENVENIDO.mp4" },
@@ -23,14 +38,15 @@ const COURSES_DATA = [
       { id: "rev_7", title: "Clase 7 - O Segredo Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_7.mp4" }
     ]
   },
+  // 3. DE LA TEORIA AL TOQUE (9 videos)
   {
     id: "teoria_ao_toque",
     title: "De La Teoría Al Toque",
     category: "main",
     type: "video",
     icon: "✨",
-    badge: "DE LA TEORÍA AL TOQUE",
-    bgGradient: "linear-gradient(135deg, #8000ff 0%, #1a0033 100%)",
+    badge: "MÓDULO AVANÇADO",
+    bgGradient: "linear-gradient(135deg, #6600cc 0%, #150033 100%)",
     description: "Colocando a teoria na prática com demonstrações detalhadas e passo a passo.",
     lessons: [
       { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_3.mp4" },
@@ -44,6 +60,7 @@ const COURSES_DATA = [
       { id: "tt_11", title: "Clase 11 - Masterclass de Integração", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_11.mp4" }
     ]
   },
+  // 4. EL REY (3 videos + 1 PDF)
   {
     id: "el_rey",
     title: "El Rey - Código del Sexo Anal",
@@ -60,6 +77,7 @@ const COURSES_DATA = [
       { id: "rey_pdf", title: "Guia PDF - Cómo Dar Placer a la Mujer", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Como_Dar_Placer_en_el_Sexo_Anal.pdf" }
     ]
   },
+  // 5. CIERRE (2 videos)
   {
     id: "cierre",
     title: "Cierre - O Arremate Final",
@@ -67,13 +85,14 @@ const COURSES_DATA = [
     type: "video",
     icon: "🔒",
     badge: "CIERRE",
-    bgGradient: "linear-gradient(135deg, #ff0055 0%, #4d001a 100%)",
+    bgGradient: "linear-gradient(135deg, #cc0044 0%, #330011 100%)",
     description: "Técnicas de encerramento para garantir atração duradoura.",
     lessons: [
       { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_1.mp4" },
       { id: "cie_2", title: "Clase 2 - Âncora Emocional", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_2.mp4" }
     ]
   },
+  // 6. BONO EXCLUSIVO (1 video)
   {
     id: "bono_exclusivo",
     title: "Bonificación Exclusiva",
@@ -81,38 +100,13 @@ const COURSES_DATA = [
     type: "video",
     icon: "🎁",
     badge: "BONO",
-    bgGradient: "linear-gradient(135deg, #ff9900 0%, #4d2e00 100%)",
+    bgGradient: "linear-gradient(135deg, #e67e22 0%, #3d2000 100%)",
     description: "Conteúdo bônus exclusivo para membros.",
     lessons: [
       { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BONO__BONIFICACION_EXCLUSIVA.mp4" }
     ]
   },
-  {
-    id: "combo_secreto",
-    title: "Combo Secreto",
-    category: "bonus",
-    type: "video",
-    icon: "🛍️",
-    badge: "COMBO SECRETO",
-    bgGradient: "linear-gradient(135deg, #00d2ff 0%, #003a4d 100%)",
-    description: "Vídeo completo do Combo Secreto (Tienda Online).",
-    lessons: [
-      { id: "combo_1", title: "Tienda Online - Guia de Produtos & Uso", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COMBO_SECRETO__TIENDA_ONLINE.mp4" }
-    ]
-  },
-  {
-    id: "welcome_app",
-    title: "Bienvenido a El Secreto",
-    category: "main",
-    type: "video",
-    icon: "👋",
-    badge: "BIENVENIDO",
-    bgGradient: "linear-gradient(135deg, #222222 0%, #050505 100%)",
-    description: "Boas-vindas oficiais e introdução da plataforma.",
-    lessons: [
-      { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
-    ]
-  },
+  // 7. LA FORMULA DEL CLIMA IDEAL (4 PDFs)
   {
     id: "clima_ideal",
     title: "La Fórmula del Clima Ideal",
@@ -129,6 +123,7 @@ const COURSES_DATA = [
       { id: "clima_4", title: "El Arte del Precalentamiento Emocional", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__El-Arte-del-Precalentamiento-Emocional.pdf" }
     ]
   },
+  // 8. EL RITUAL SECRETO (2 PDFs)
   {
     id: "ritual_secreto",
     title: "El Ritual Secreto",
@@ -143,6 +138,7 @@ const COURSES_DATA = [
       { id: "rit_2", title: "Los Cuatro Elementos del Deseo", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__Los-Cuatro-Elementos-del-Deseo.pdf" }
     ]
   },
+  // 9. MANUALES & EBOOKS (3 PDFs)
   {
     id: "ebooks_pack",
     title: "E-Books & Guias Exclusivos",
@@ -158,6 +154,7 @@ const COURSES_DATA = [
       { id: "eb_3", title: "Manual Anti-Eyaculación Precoz", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Manual_AntiEyaculaciA.n.pdf" }
     ]
   },
+  // 10. PERFORMANCE MAXIMO (1 PDF)
   {
     id: "performance_max",
     title: "Performance Máximo",
@@ -203,7 +200,7 @@ function renderNetflixRows(searchQuery = '') {
 
     const card = document.createElement('div');
     card.className = 'netflix-card';
-    card.onclick = () => openNetflixModal(course);
+    card.onclick = () => openNetflixModal(course, 0); // Autoplay 1st lesson!
 
     card.innerHTML = `
       <div class="card-poster" style="background: ${course.bgGradient}">
@@ -216,7 +213,7 @@ function renderNetflixRows(searchQuery = '') {
           <h4>${course.title}</h4>
           <div class="card-info-meta">
             <span>${course.lessons.length} ${course.type === 'video' ? 'Aulas' : 'PDFs'}</span>
-            <span style="color: #fff; font-size: 0.65rem; background: rgba(255,255,255,0.2); padding: 1px 4px; border-radius: 2px;">HD</span>
+            <span style="color: #fff; font-size: 0.65rem; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 3px;">HD</span>
           </div>
         </div>
       </div>
@@ -230,10 +227,10 @@ function renderNetflixRows(searchQuery = '') {
 
 function openCourseById(courseId) {
   const course = COURSES_DATA.find(c => c.id === courseId);
-  if (course) openNetflixModal(course);
+  if (course) openNetflixModal(course, 0);
 }
 
-// Open Netflix Modal Player
+// Open Netflix Modal Player & Autoplay
 function openNetflixModal(course, lessonIndex = 0) {
   currentCourse = course;
   currentLesson = course.lessons[lessonIndex];
@@ -250,6 +247,14 @@ function openNetflixModal(course, lessonIndex = 0) {
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  // Autoplay video immediately
+  setTimeout(() => {
+    const video = document.getElementById('netflixVideoPlayer');
+    if (video) {
+      video.play().catch(e => console.log("Autoplay policy requires user click:", e));
+    }
+  }, 150);
 }
 
 function closeNetflixModal() {
@@ -287,7 +292,7 @@ function renderPlayer(lesson) {
   } else {
     area.innerHTML = `
       <div style="padding: 20px; text-align: center;">
-        <iframe src="${encodeURI(lesson.src)}" style="width:100%; height:450px; border:none; border-radius:6px; background:#111;"></iframe>
+        <iframe src="${encodeURI(lesson.src)}" style="width:100%; height:460px; border:none; border-radius:6px; background:#111;"></iframe>
         <a href="${encodeURI(lesson.src)}" download class="btn-netflix btn-netflix-primary" style="margin-top: 16px; text-decoration: none; display: inline-flex;">
           <i class="fa-solid fa-download"></i> Baixar Arquivo PDF
         </a>
@@ -309,14 +314,18 @@ function renderEpisodeList() {
     card.onclick = () => {
       renderPlayer(lesson);
       renderEpisodeList();
+      setTimeout(() => {
+        const v = document.getElementById('netflixVideoPlayer');
+        if (v) v.play();
+      }, 100);
     };
 
     card.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <i class="fa-solid ${lesson.type === 'video' ? 'fa-play' : 'fa-file-pdf'}" style="color: ${isCurrent ? 'var(--netflix-red)' : '#aaa'}"></i>
-        <span style="font-weight: 600; font-size: 0.9rem; color: #fff;">${lesson.title}</span>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <i class="fa-solid ${lesson.type === 'video' ? 'fa-play' : 'fa-file-pdf'}" style="color: ${isCurrent ? 'var(--netflix-red)' : '#aaa'}; font-size: 1.1rem;"></i>
+        <span style="font-weight: 700; font-size: 0.95rem; color: #fff;">${lesson.title}</span>
       </div>
-      <span style="font-size: 0.75rem; color: #777;">${lesson.type === 'video' ? 'Vídeo' : 'PDF'}</span>
+      <span style="font-size: 0.78rem; color: #888;">${lesson.type === 'video' ? 'Vídeo HD' : 'Documento PDF'}</span>
     `;
 
     list.appendChild(card);
