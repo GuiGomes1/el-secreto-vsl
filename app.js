@@ -1,5 +1,5 @@
 /* ==========================================================================
-   El Secreto - Netflix Cinema App Engine (Autoplay & Ordered Modules)
+   El Secreto - Netflix Cinema App Engine (Custom Card Posters & Autoplay)
    ========================================================================== */
 
 const COURSES_DATA = [
@@ -9,9 +9,10 @@ const COURSES_DATA = [
     title: "Bienvenido a El Secreto",
     category: "main",
     type: "video",
-    icon: "👋",
+    icon: "fa-play-circle",
+    watermarkIcon: "fa-circle-play",
+    themeClass: "theme-welcome",
     badge: "COMEÇAR POR AQUI",
-    bgGradient: "linear-gradient(135deg, #e50914 0%, #1a0003 100%)",
     description: "Boas-vindas oficiais e introdução sobre como aproveitar ao máximo a plataforma.",
     lessons: [
       { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
@@ -23,9 +24,10 @@ const COURSES_DATA = [
     title: "Revelando El Placer Femenino",
     category: "main",
     type: "video",
-    icon: "🔥",
+    icon: "fa-fire",
+    watermarkIcon: "fa-fire-flame-curved",
+    themeClass: "theme-revelando",
     badge: "MÓDULO PRINCIPAL",
-    bgGradient: "linear-gradient(135deg, #880015 0%, #200005 100%)",
     description: "Dominando os segredos do prazer com técnicas passo a passo de toque e conexão.",
     lessons: [
       { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__BIENVENIDO.mp4" },
@@ -44,9 +46,10 @@ const COURSES_DATA = [
     title: "De La Teoría Al Toque",
     category: "main",
     type: "video",
-    icon: "✨",
+    icon: "fa-wand-magic-sparkles",
+    watermarkIcon: "fa-hand-sparkles",
+    themeClass: "theme-teoria",
     badge: "MÓDULO AVANÇADO",
-    bgGradient: "linear-gradient(135deg, #6600cc 0%, #150033 100%)",
     description: "Colocando a teoria na prática com demonstrações detalhadas e passo a passo.",
     lessons: [
       { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_3.mp4" },
@@ -66,9 +69,10 @@ const COURSES_DATA = [
     title: "El Rey - Código del Sexo Anal",
     category: "bonus",
     type: "video",
-    icon: "👑",
+    icon: "fa-crown",
+    watermarkIcon: "fa-chess-king",
+    themeClass: "theme-rey",
     badge: "EL REY VIP",
-    bgGradient: "linear-gradient(135deg, #d4af37 0%, #3a2e00 100%)",
     description: "O guia completo sem dor e com máximo prazer para ambos.",
     lessons: [
       { id: "rey_1", title: "Clase 1 - O Código Inicial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_1_-_Codigo_del_Sexo_Anal.mp4" },
@@ -83,9 +87,10 @@ const COURSES_DATA = [
     title: "Cierre - O Arremate Final",
     category: "bonus",
     type: "video",
-    icon: "🔒",
+    icon: "fa-lock",
+    watermarkIcon: "fa-key",
+    themeClass: "theme-cierre",
     badge: "CIERRE",
-    bgGradient: "linear-gradient(135deg, #cc0044 0%, #330011 100%)",
     description: "Técnicas de encerramento para garantir atração duradoura.",
     lessons: [
       { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_1.mp4" },
@@ -98,9 +103,10 @@ const COURSES_DATA = [
     title: "Bonificación Exclusiva",
     category: "bonus",
     type: "video",
-    icon: "🎁",
+    icon: "fa-gift",
+    watermarkIcon: "fa-box-open",
+    themeClass: "theme-bono",
     badge: "BONO",
-    bgGradient: "linear-gradient(135deg, #e67e22 0%, #3d2000 100%)",
     description: "Conteúdo bônus exclusivo para membros.",
     lessons: [
       { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BONO__BONIFICACION_EXCLUSIVA.mp4" }
@@ -112,9 +118,10 @@ const COURSES_DATA = [
     title: "La Fórmula del Clima Ideal",
     category: "pdf",
     type: "pdf",
-    icon: "🍷",
+    icon: "fa-wine-glass",
+    watermarkIcon: "fa-glass-cheers",
+    themeClass: "theme-clima",
     badge: "EL CLIMA IDEAL",
-    bgGradient: "linear-gradient(135deg, #0055ff 0%, #001a4d 100%)",
     description: "4 Guias práticos para criar o ambiente e o clima perfeito.",
     lessons: [
       { id: "clima_1", title: "Ambiente Perfecto - Deseo Perfecto", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__Ambiente-Perfecto-Deseo-Perfecto.pdf" },
@@ -129,9 +136,10 @@ const COURSES_DATA = [
     title: "El Ritual Secreto",
     category: "pdf",
     type: "pdf",
-    icon: "🔮",
+    icon: "fa-gem",
+    watermarkIcon: "fa-atom",
+    themeClass: "theme-ritual",
     badge: "RITUAL SECRETO",
-    bgGradient: "linear-gradient(135deg, #9900cc 0%, #330044 100%)",
     description: "Técnicas energéticas e de sintonia para atração magnética.",
     lessons: [
       { id: "rit_1", title: "El Ritual de la Energía y la Sintonía", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__El-Ritual-de-la-Energia-y-la-Sintonia.pdf" },
@@ -144,9 +152,10 @@ const COURSES_DATA = [
     title: "E-Books & Guias Exclusivos",
     category: "pdf",
     type: "pdf",
-    icon: "📖",
+    icon: "fa-book-open",
+    watermarkIcon: "fa-book-bookmark",
+    themeClass: "theme-ebooks",
     badge: "E-BOOKS",
-    bgGradient: "linear-gradient(135deg, #009966 0%, #003322 100%)",
     description: "Manuais de orgasmo, chá do desejo e técnicas de controle.",
     lessons: [
       { id: "eb_1", title: "Té Del Deseo Infinito", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Te_Del_Deseo_Infinito.pdf" },
@@ -160,9 +169,10 @@ const COURSES_DATA = [
     title: "Performance Máximo",
     category: "pdf",
     type: "pdf",
-    icon: "⚡",
+    icon: "fa-bolt",
+    watermarkIcon: "fa-charging-station",
+    themeClass: "theme-performance",
     badge: "PERFORMANCE MÁXIMO",
-    bgGradient: "linear-gradient(135deg, #cc0000 0%, #440000 100%)",
     description: "Manual de Alta Performance Sexual Masculina.",
     lessons: [
       { id: "perf_1", title: "Guia Upsell 3 - Performance Máxima", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/PERFORMANCE_MAXIMO__Upsell_3-_Performance_Maxima.pdf" }
@@ -179,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavbarScroll();
 });
 
-// Render Rows (Netflix Style)
+// Render Rows (Netflix Style with Custom Artwork & Watermarks)
 function renderNetflixRows(searchQuery = '') {
   const rowMain = document.getElementById('rowMain');
   const rowBonus = document.getElementById('rowBonus');
@@ -200,10 +210,11 @@ function renderNetflixRows(searchQuery = '') {
 
     const card = document.createElement('div');
     card.className = 'netflix-card';
-    card.onclick = () => openNetflixModal(course, 0); // Autoplay 1st lesson!
+    card.onclick = () => openNetflixModal(course, 0);
 
     card.innerHTML = `
-      <div class="card-poster" style="background: ${course.bgGradient}">
+      <div class="card-poster ${course.themeClass}">
+        <i class="fa-solid ${course.watermarkIcon} card-artwork-watermark"></i>
         <div class="card-poster-overlay"></div>
         <div class="card-top-tag">${course.badge}</div>
         <div class="card-play-icon">
@@ -212,7 +223,7 @@ function renderNetflixRows(searchQuery = '') {
         <div class="card-info">
           <h4>${course.title}</h4>
           <div class="card-info-meta">
-            <span>${course.lessons.length} ${course.type === 'video' ? 'Aulas' : 'PDFs'}</span>
+            <span><i class="fa-solid ${course.icon}"></i> ${course.lessons.length} ${course.type === 'video' ? 'Aulas' : 'PDFs'}</span>
             <span style="color: #fff; font-size: 0.65rem; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 3px;">HD</span>
           </div>
         </div>
@@ -248,7 +259,6 @@ function openNetflixModal(course, lessonIndex = 0) {
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  // Autoplay video immediately
   setTimeout(() => {
     const video = document.getElementById('netflixVideoPlayer');
     if (video) {

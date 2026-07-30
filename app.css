@@ -1,5 +1,5 @@
 /* ==========================================================================
-   El Secreto - Netflix Cinema UI (Mobile Responsive & App Bar)
+   El Secreto - High-End Custom Card Artwork & Poster Styling
    ========================================================================== */
 
 :root {
@@ -31,7 +31,7 @@ body {
   font-family: var(--font-netflix);
   line-height: 1.4;
   overflow-x: hidden;
-  padding-bottom: 70px; /* Space for bottom mobile nav */
+  padding-bottom: 70px;
 }
 
 /* Navbar */
@@ -245,12 +245,11 @@ body {
 
 .row-slider {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   overflow-x: auto;
-  padding: 10px 4px 18px 4px;
+  padding: 12px 4px 22px 4px;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
-
 }
 .row-slider::-webkit-scrollbar { display: none; }
 
@@ -264,47 +263,67 @@ body {
   background: var(--netflix-card-bg);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
   scroll-snap-align: start;
 }
 
 .netflix-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
   z-index: 100;
   box-shadow: 0 14px 40px rgba(0,0,0,0.95), 0 0 20px var(--netflix-red-glow);
   border-color: var(--netflix-red);
 }
 
+/* Poster Artwork Container */
 .card-poster {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* Card Decorative Background Patterns & Watermarks */
+.card-artwork-watermark {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  font-size: 6.5rem;
+  opacity: 0.15;
+  color: #fff;
+  pointer-events: none;
+  line-height: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.netflix-card:hover .card-artwork-watermark {
+  transform: scale(1.15) rotate(-5deg);
+  opacity: 0.28;
 }
 
 .card-poster-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.88) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.92) 100%);
+  z-index: 1;
 }
 
 .card-top-tag {
   position: relative;
   z-index: 2;
   align-self: flex-start;
-  background: rgba(0,0,0,0.8);
-  padding: 3px 8px;
+  background: rgba(0,0,0,0.85);
+  padding: 3px 10px;
   border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 800;
   color: var(--gold-accent);
-  border: 1px solid rgba(255,215,0,0.5);
+  border: 1px solid rgba(255,215,0,0.6);
   backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .card-info {
@@ -313,16 +332,17 @@ body {
 }
 
 .card-info h4 {
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 1.18rem;
+  font-weight: 900;
   color: #fff;
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: 4px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+  letter-spacing: -0.2px;
 }
 
 .card-info-meta {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: #46d369;
   font-weight: 700;
   display: flex;
@@ -335,23 +355,56 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   background: rgba(229, 9, 20, 0.95);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   opacity: 0;
   transition: all 0.25s ease;
-  box-shadow: 0 0 20px var(--netflix-red);
+  box-shadow: 0 0 25px var(--netflix-red);
+  z-index: 5;
 }
 
 .netflix-card:hover .card-play-icon {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+/* Specific Custom Artwork Themes for each Module */
+.theme-welcome {
+  background: radial-gradient(circle at 80% 20%, #ff0033 0%, #300008 50%, #0c0003 100%);
+}
+.theme-revelando {
+  background: radial-gradient(circle at 80% 20%, #e50914 0%, #50000a 60%, #150003 100%);
+}
+.theme-teoria {
+  background: radial-gradient(circle at 80% 20%, #9900ff 0%, #3b0066 60%, #10001c 100%);
+}
+.theme-rey {
+  background: radial-gradient(circle at 80% 20%, #ffd700 0%, #664d00 50%, #1a1400 100%);
+}
+.theme-cierre {
+  background: radial-gradient(circle at 80% 20%, #ff0066 0%, #660029 60%, #1a000b 100%);
+}
+.theme-bono {
+  background: radial-gradient(circle at 80% 20%, #ff9900 0%, #663d00 60%, #1a1000 100%);
+}
+.theme-clima {
+  background: radial-gradient(circle at 80% 20%, #0066ff 0%, #002266 60%, #00081a 100%);
+}
+.theme-ritual {
+  background: radial-gradient(circle at 80% 20%, #b300ff 0%, #440066 60%, #11001a 100%);
+}
+.theme-ebooks {
+  background: radial-gradient(circle at 80% 20%, #00cc66 0%, #004d26 60%, #00140a 100%);
+}
+.theme-performance {
+  background: radial-gradient(circle at 80% 20%, #ff0000 0%, #550000 60%, #1a0000 100%);
 }
 
 /* Modal Player */
@@ -530,7 +583,7 @@ video.netflix-player {
   }
   
   .nav-menu {
-    display: none; /* Hide top text menu on mobile in favor of bottom app bar */
+    display: none;
   }
 
   .netflix-logo {
@@ -578,15 +631,14 @@ video.netflix-player {
     font-size: 1.15rem;
   }
 
-  /* Compact Responsive Cards for Touch Screen */
   .netflix-card {
-    flex: 0 0 220px;
-    height: 135px;
+    flex: 0 0 230px;
+    height: 140px;
     border-radius: 8px;
   }
 
   .card-info h4 {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 
   .card-top-tag {
@@ -607,6 +659,6 @@ video.netflix-player {
   }
 
   .bottom-app-bar {
-    display: flex; /* Show bottom app bar on mobile screens */
+    display: flex;
   }
 }
