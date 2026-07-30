@@ -1,5 +1,5 @@
 /* ==========================================================================
-   El Secreto - Netflix Cinema App Engine (Custom Card Posters & Autoplay)
+   El Secreto - Ultra-Premium Netflix Cinema Engine (Photorealistic Covers)
    ========================================================================== */
 
 const COURSES_DATA = [
@@ -10,9 +10,9 @@ const COURSES_DATA = [
     category: "main",
     type: "video",
     icon: "fa-play-circle",
-    watermarkIcon: "fa-circle-play",
-    themeClass: "theme-welcome",
     badge: "COMEÇAR POR AQUI",
+    progressPct: 85,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__welcome.jpg",
     description: "Boas-vindas oficiais e introdução sobre como aproveitar ao máximo a plataforma.",
     lessons: [
       { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
@@ -25,9 +25,9 @@ const COURSES_DATA = [
     category: "main",
     type: "video",
     icon: "fa-fire",
-    watermarkIcon: "fa-fire-flame-curved",
-    themeClass: "theme-revelando",
     badge: "MÓDULO PRINCIPAL",
+    progressPct: 40,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__revelando.jpg",
     description: "Dominando os segredos do prazer com técnicas passo a passo de toque e conexão.",
     lessons: [
       { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__BIENVENIDO.mp4" },
@@ -47,9 +47,9 @@ const COURSES_DATA = [
     category: "main",
     type: "video",
     icon: "fa-wand-magic-sparkles",
-    watermarkIcon: "fa-hand-sparkles",
-    themeClass: "theme-teoria",
     badge: "MÓDULO AVANÇADO",
+    progressPct: 15,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__teoria.jpg",
     description: "Colocando a teoria na prática com demonstrações detalhadas e passo a passo.",
     lessons: [
       { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_3.mp4" },
@@ -70,9 +70,9 @@ const COURSES_DATA = [
     category: "bonus",
     type: "video",
     icon: "fa-crown",
-    watermarkIcon: "fa-chess-king",
-    themeClass: "theme-rey",
     badge: "EL REY VIP",
+    progressPct: 60,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__rey.jpg",
     description: "O guia completo sem dor e com máximo prazer para ambos.",
     lessons: [
       { id: "rey_1", title: "Clase 1 - O Código Inicial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_1_-_Codigo_del_Sexo_Anal.mp4" },
@@ -88,9 +88,9 @@ const COURSES_DATA = [
     category: "bonus",
     type: "video",
     icon: "fa-lock",
-    watermarkIcon: "fa-key",
-    themeClass: "theme-cierre",
-    badge: "CIERRE",
+    badge: "CIERRE VIP",
+    progressPct: 0,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__cierre.jpg",
     description: "Técnicas de encerramento para garantir atração duradoura.",
     lessons: [
       { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_1.mp4" },
@@ -104,9 +104,9 @@ const COURSES_DATA = [
     category: "bonus",
     type: "video",
     icon: "fa-gift",
-    watermarkIcon: "fa-box-open",
-    themeClass: "theme-bono",
-    badge: "BONO",
+    badge: "BÔNUS EXCLUSIVO",
+    progressPct: 100,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__bono.jpg",
     description: "Conteúdo bônus exclusivo para membros.",
     lessons: [
       { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BONO__BONIFICACION_EXCLUSIVA.mp4" }
@@ -119,9 +119,9 @@ const COURSES_DATA = [
     category: "pdf",
     type: "pdf",
     icon: "fa-wine-glass",
-    watermarkIcon: "fa-glass-cheers",
-    themeClass: "theme-clima",
     badge: "EL CLIMA IDEAL",
+    progressPct: 50,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__clima.jpg",
     description: "4 Guias práticos para criar o ambiente e o clima perfeito.",
     lessons: [
       { id: "clima_1", title: "Ambiente Perfecto - Deseo Perfecto", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__Ambiente-Perfecto-Deseo-Perfecto.pdf" },
@@ -137,9 +137,9 @@ const COURSES_DATA = [
     category: "pdf",
     type: "pdf",
     icon: "fa-gem",
-    watermarkIcon: "fa-atom",
-    themeClass: "theme-ritual",
     badge: "RITUAL SECRETO",
+    progressPct: 25,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__ritual.jpg",
     description: "Técnicas energéticas e de sintonia para atração magnética.",
     lessons: [
       { id: "rit_1", title: "El Ritual de la Energía y la Sintonía", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__El-Ritual-de-la-Energia-y-la-Sintonia.pdf" },
@@ -153,9 +153,9 @@ const COURSES_DATA = [
     category: "pdf",
     type: "pdf",
     icon: "fa-book-open",
-    watermarkIcon: "fa-book-bookmark",
-    themeClass: "theme-ebooks",
-    badge: "E-BOOKS",
+    badge: "BIBLIOTECA VIP",
+    progressPct: 70,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__ebooks.jpg",
     description: "Manuais de orgasmo, chá do desejo e técnicas de controle.",
     lessons: [
       { id: "eb_1", title: "Té Del Deseo Infinito", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Te_Del_Deseo_Infinito.pdf" },
@@ -170,9 +170,9 @@ const COURSES_DATA = [
     category: "pdf",
     type: "pdf",
     icon: "fa-bolt",
-    watermarkIcon: "fa-charging-station",
-    themeClass: "theme-performance",
     badge: "PERFORMANCE MÁXIMO",
+    progressPct: 90,
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__performance.jpg",
     description: "Manual de Alta Performance Sexual Masculina.",
     lessons: [
       { id: "perf_1", title: "Guia Upsell 3 - Performance Máxima", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/PERFORMANCE_MAXIMO__Upsell_3-_Performance_Maxima.pdf" }
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavbarScroll();
 });
 
-// Render Rows (Netflix Style with Custom Artwork & Watermarks)
+// Render Rows with Photorealistic Cover Art & Progress Bars
 function renderNetflixRows(searchQuery = '') {
   const rowMain = document.getElementById('rowMain');
   const rowBonus = document.getElementById('rowBonus');
@@ -213,8 +213,7 @@ function renderNetflixRows(searchQuery = '') {
     card.onclick = () => openNetflixModal(course, 0);
 
     card.innerHTML = `
-      <div class="card-poster ${course.themeClass}">
-        <i class="fa-solid ${course.watermarkIcon} card-artwork-watermark"></i>
+      <div class="card-poster" style="background-image: url('${course.coverImg}')">
         <div class="card-poster-overlay"></div>
         <div class="card-top-tag">${course.badge}</div>
         <div class="card-play-icon">
@@ -224,8 +223,11 @@ function renderNetflixRows(searchQuery = '') {
           <h4>${course.title}</h4>
           <div class="card-info-meta">
             <span><i class="fa-solid ${course.icon}"></i> ${course.lessons.length} ${course.type === 'video' ? 'Aulas' : 'PDFs'}</span>
-            <span style="color: #fff; font-size: 0.65rem; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 3px;">HD</span>
+            <span class="card-hd-badge">HD</span>
           </div>
+        </div>
+        <div class="card-progress-bar-wrap">
+          <div class="card-progress-bar-fill" style="width: ${course.progressPct || 0}%"></div>
         </div>
       </div>
     `;

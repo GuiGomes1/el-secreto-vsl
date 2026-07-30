@@ -1,14 +1,14 @@
 /* ==========================================================================
-   El Secreto - High-End Custom Card Artwork & Poster Styling
+   El Secreto - Ultra-Luxury Netflix Cinema Design System (Glassmorphic)
    ========================================================================== */
 
 :root {
   --netflix-black: #141414;
   --netflix-dark-gray: #181818;
-  --netflix-card-bg: #1f1f26;
+  --netflix-card-bg: #1a1a20;
   --netflix-red: #e50914;
   --netflix-red-hover: #f40612;
-  --netflix-red-glow: rgba(229, 9, 20, 0.45);
+  --netflix-red-glow: rgba(229, 9, 20, 0.55);
   --gold-accent: #ffd700;
 
   --text-white: #ffffff;
@@ -16,6 +16,7 @@
   --text-muted: #777777;
 
   --font-netflix: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 * {
@@ -40,7 +41,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: 68px;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -51,21 +52,24 @@ body {
 }
 
 .netflix-nav.scrolled {
-  background: #141414;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.9);
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .netflix-logo {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 800;
   color: var(--netflix-red);
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 0 15px var(--netflix-red-glow);
@@ -74,14 +78,14 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   list-style: none;
 }
 
 .nav-link {
   color: #e5e5e5;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   transition: color 0.2s;
   cursor: pointer;
 }
@@ -102,19 +106,19 @@ body {
 }
 
 .search-input-box input {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.8);
   border: 1px solid rgba(255,255,255,0.25);
   color: #fff;
-  padding: 7px 12px 7px 32px;
+  padding: 8px 14px 8px 36px;
   border-radius: 20px;
   font-size: 0.82rem;
   outline: none;
-  width: 180px;
+  width: 190px;
   transition: width 0.3s, border-color 0.3s;
 }
 
 .search-input-box input:focus {
-  width: 240px;
+  width: 250px;
   border-color: var(--netflix-red);
 }
 
@@ -130,25 +134,25 @@ body {
 /* Billboard Hero */
 .billboard {
   position: relative;
-  height: 65vh;
-  min-height: 440px;
-  background: linear-gradient(135deg, #45000a 0%, #141414 100%);
+  height: 68vh;
+  min-height: 460px;
+  background: linear-gradient(135deg, #400008 0%, #141414 100%);
   display: flex;
   align-items: center;
   padding: 0 4%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   overflow: hidden;
 }
 
 .billboard-bg-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 35%, rgba(229,9,20,0.3) 0%, transparent 65%);
+  background: radial-gradient(circle at 75% 35%, rgba(229,9,20,0.35) 0%, transparent 65%);
   pointer-events: none;
 }
 
 .billboard-content {
-  max-width: 650px;
+  max-width: 680px;
   z-index: 2;
   margin-top: 30px;
 }
@@ -161,31 +165,32 @@ body {
   color: #fff;
   padding: 4px 12px;
   border-radius: 3px;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .billboard-title {
-  font-size: 3rem;
-  font-weight: 900;
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 12px;
-  text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
+  margin-bottom: 14px;
+  text-shadow: 2px 2px 14px rgba(0,0,0,0.9);
 }
 
 .billboard-desc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #d2d2d2;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
 }
 
 .billboard-actions {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -194,9 +199,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 12px 24px;
+  padding: 13px 28px;
   border-radius: 4px;
-  font-size: 0.98rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   border: none;
@@ -224,23 +229,23 @@ body {
 /* Rows & Large Cinematic Cards */
 .rows-container {
   padding: 0 4%;
-  margin-top: -40px;
+  margin-top: -45px;
   position: relative;
   z-index: 10;
 }
 
 .row-section {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .row-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .row-slider {
@@ -253,61 +258,44 @@ body {
 }
 .row-slider::-webkit-scrollbar { display: none; }
 
-/* Cinematic Cards (Responsive 16:9 Format) */
+/* Photorealistic Card Postering */
 .netflix-card {
-  flex: 0 0 320px;
-  height: 190px;
+  flex: 0 0 340px;
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   background: var(--netflix-card-bg);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   border: 1px solid rgba(255,255,255,0.15);
   scroll-snap-align: start;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
 .netflix-card:hover {
-  transform: scale(1.06);
+  transform: scale(1.06) translateY(-4px);
   z-index: 100;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.95), 0 0 20px var(--netflix-red-glow);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.95), 0 0 25px var(--netflix-red-glow);
   border-color: var(--netflix-red);
 }
 
-/* Poster Artwork Container */
 .card-poster {
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
-  overflow: hidden;
-}
-
-/* Card Decorative Background Patterns & Watermarks */
-.card-artwork-watermark {
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
-  font-size: 6.5rem;
-  opacity: 0.15;
-  color: #fff;
-  pointer-events: none;
-  line-height: 1;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.netflix-card:hover .card-artwork-watermark {
-  transform: scale(1.15) rotate(-5deg);
-  opacity: 0.28;
 }
 
 .card-poster-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.92) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
   z-index: 1;
 }
 
@@ -315,15 +303,15 @@ body {
   position: relative;
   z-index: 2;
   align-self: flex-start;
-  background: rgba(0,0,0,0.85);
-  padding: 3px 10px;
+  background: rgba(0,0,0,0.8);
+  padding: 4px 10px;
   border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 800;
   color: var(--gold-accent);
   border: 1px solid rgba(255,215,0,0.6);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .card-info {
@@ -332,13 +320,12 @@ body {
 }
 
 .card-info h4 {
-  font-size: 1.18rem;
-  font-weight: 900;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #fff;
-  line-height: 1.2;
-  margin-bottom: 4px;
+  line-height: 1.25;
+  margin-bottom: 6px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-  letter-spacing: -0.2px;
 }
 
 .card-info-meta {
@@ -350,13 +337,22 @@ body {
   gap: 8px;
 }
 
+.card-hd-badge {
+  color: #fff;
+  font-size: 0.65rem;
+  background: rgba(255,255,255,0.25);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
 .card-play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   background: rgba(229, 9, 20, 0.95);
   border-radius: 50%;
   display: flex;
@@ -375,36 +371,21 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Specific Custom Artwork Themes for each Module */
-.theme-welcome {
-  background: radial-gradient(circle at 80% 20%, #ff0033 0%, #300008 50%, #0c0003 100%);
+/* Card Progress Bar (Netflix Red Style) */
+.card-progress-bar-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  z-index: 10;
 }
-.theme-revelando {
-  background: radial-gradient(circle at 80% 20%, #e50914 0%, #50000a 60%, #150003 100%);
-}
-.theme-teoria {
-  background: radial-gradient(circle at 80% 20%, #9900ff 0%, #3b0066 60%, #10001c 100%);
-}
-.theme-rey {
-  background: radial-gradient(circle at 80% 20%, #ffd700 0%, #664d00 50%, #1a1400 100%);
-}
-.theme-cierre {
-  background: radial-gradient(circle at 80% 20%, #ff0066 0%, #660029 60%, #1a000b 100%);
-}
-.theme-bono {
-  background: radial-gradient(circle at 80% 20%, #ff9900 0%, #663d00 60%, #1a1000 100%);
-}
-.theme-clima {
-  background: radial-gradient(circle at 80% 20%, #0066ff 0%, #002266 60%, #00081a 100%);
-}
-.theme-ritual {
-  background: radial-gradient(circle at 80% 20%, #b300ff 0%, #440066 60%, #11001a 100%);
-}
-.theme-ebooks {
-  background: radial-gradient(circle at 80% 20%, #00cc66 0%, #004d26 60%, #00140a 100%);
-}
-.theme-performance {
-  background: radial-gradient(circle at 80% 20%, #ff0000 0%, #550000 60%, #1a0000 100%);
+
+.card-progress-bar-fill {
+  height: 100%;
+  background: var(--netflix-red);
+  box-shadow: 0 0 8px var(--netflix-red);
 }
 
 /* Modal Player */
@@ -413,7 +394,7 @@ body {
   inset: 0;
   z-index: 2000;
   background: rgba(0,0,0,0.92);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -604,7 +585,7 @@ video.netflix-player {
   }
 
   .billboard-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .billboard-desc {
@@ -632,8 +613,8 @@ video.netflix-player {
   }
 
   .netflix-card {
-    flex: 0 0 230px;
-    height: 140px;
+    flex: 0 0 240px;
+    height: 145px;
     border-radius: 8px;
   }
 
