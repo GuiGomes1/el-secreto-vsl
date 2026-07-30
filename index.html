@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="app.css?v=3">
+  <link rel="stylesheet" href="app.css?v=4">
 </head>
 <body>
 
@@ -28,10 +28,7 @@
     <div class="nav-right">
       <div class="search-input-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="searchInput" placeholder="Títulos, aulas, e-books...">
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #aaa;">
-        <i class="fa-solid fa-circle-user" style="font-size: 1.5rem; color: var(--netflix-red);"></i>
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
       </div>
     </div>
   </nav>
@@ -102,10 +99,10 @@
 
       <!-- Info & Episode List -->
       <div class="modal-info-padding">
-        <h2 id="modalCourseTitle" style="font-size: 1.5rem; font-weight: 800; color: #fff;"></h2>
-        <p id="modalCourseDesc" style="color: #aaa; margin-top: 6px; font-size: 0.9rem;"></p>
+        <h2 id="modalCourseTitle" style="font-size: 1.4rem; font-weight: 800; color: #fff;"></h2>
+        <p id="modalCourseDesc" style="color: #aaa; margin-top: 6px; font-size: 0.88rem;"></p>
 
-        <h4 style="font-size: 1.1rem; color: #fff; margin-top: 24px; font-weight: 700;">
+        <h4 style="font-size: 1.05rem; color: #fff; margin-top: 20px; font-weight: 700;">
           Aulas & Capítulos:
         </h4>
         <div id="modalEpisodeList" class="episode-list"></div>
@@ -113,6 +110,26 @@
     </div>
   </div>
 
-  <script src="app.js?v=3"></script>
+  <!-- Mobile Bottom App Bar -->
+  <nav class="bottom-app-bar">
+    <a class="app-bar-item active" onclick="filterRow('all')">
+      <i class="fa-solid fa-house"></i>
+      <span>Início</span>
+    </a>
+    <a class="app-bar-item" onclick="filterRow('main')">
+      <i class="fa-solid fa-play-circle"></i>
+      <span>Cursos</span>
+    </a>
+    <a class="app-bar-item" onclick="filterRow('bonus')">
+      <i class="fa-solid fa-gift"></i>
+      <span>Bônus</span>
+    </a>
+    <a class="app-bar-item" onclick="filterRow('pdf')">
+      <i class="fa-solid fa-book-open"></i>
+      <span>E-Books</span>
+    </a>
+  </nav>
+
+  <script src="app.js?v=4"></script>
 </body>
 </html>
