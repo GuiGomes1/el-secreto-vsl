@@ -14,14 +14,14 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #4a000d 0%, #150005 100%)",
     description: "Dominando os segredos do prazer com técnicas passo a passo de toque e conexão.",
     lessons: [
-      { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/BIENVENIDO.mp4" },
-      { id: "rev_1", title: "Clase 1 - O Início da Conexão", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_1.mp4" },
-      { id: "rev_2", title: "Clase 2 - Mapeando a Sensibilidade", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_2.mp4" },
-      { id: "rev_3", title: "Clase 3 - Técnicas de Toque Avançadas", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_3.mp4" },
-      { id: "rev_4", title: "Clase 4 - Ritmo e Intensidade", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_4.mp4" },
-      { id: "rev_5", title: "Clase 5 - Aceleração do Clímax", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_5.mp4" },
-      { id: "rev_6", title: "Clase 6 - Liberando Bloqueios", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_6.mp4" },
-      { id: "rev_7", title: "Clase 7 - O Segredo Final", type: "video", src: "VSLs_El_Secreto/REVELANDO_EL_PLACER/CLASE_7.mp4" }
+      { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__BIENVENIDO.mp4" },
+      { id: "rev_1", title: "Clase 1 - O Início da Conexão", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_1.mp4" },
+      { id: "rev_2", title: "Clase 2 - Mapeando a Sensibilidade", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_2.mp4" },
+      { id: "rev_3", title: "Clase 3 - Técnicas de Toque Avançadas", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_3.mp4" },
+      { id: "rev_4", title: "Clase 4 - Ritmo e Intensidade", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_4.mp4" },
+      { id: "rev_5", title: "Clase 5 - Aceleração do Clímax", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_5.mp4" },
+      { id: "rev_6", title: "Clase 6 - Liberando Bloqueios", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_6.mp4" },
+      { id: "rev_7", title: "Clase 7 - O Segredo Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__CLASE_7.mp4" }
     ]
   },
   {
@@ -34,15 +34,15 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #2d0b3f 0%, #0d0014 100%)",
     description: "Colocando a teoria na prática com demonstrações detalhadas e passo a passo.",
     lessons: [
-      { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_3.mp4" },
-      { id: "tt_4", title: "Clase 4 - Sequência de Toques", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_4.mp4" },
-      { id: "tt_5", title: "Clase 5 - Sensibilização Corporal", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_5.mp4" },
-      { id: "tt_6", title: "Clase 6 - Controle do Ritmo", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_6.mp4" },
-      { id: "tt_7", title: "Clase 7 - Pontos de Pressão", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_7.mp4" },
-      { id: "tt_8", title: "Clase 8 - Construção da Tensão", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_8.mp4" },
-      { id: "tt_9", title: "Clase 9 - Técnica de Liberação", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_9.mp4" },
-      { id: "tt_10", title: "Clase 10 - Orgasmo Multi-Nível", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_10.mp4" },
-      { id: "tt_11", title: "Clase 11 - Masterclass de Integração", type: "video", src: "VSLs_El_Secreto/DE_LA_TEORIA_AL_TOQUE/CLASE_11.mp4" }
+      { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_3.mp4" },
+      { id: "tt_4", title: "Clase 4 - Sequência de Toques", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_4.mp4" },
+      { id: "tt_5", title: "Clase 5 - Sensibilização Corporal", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_5.mp4" },
+      { id: "tt_6", title: "Clase 6 - Controle do Ritmo", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_6.mp4" },
+      { id: "tt_7", title: "Clase 7 - Pontos de Pressão", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_7.mp4" },
+      { id: "tt_8", title: "Clase 8 - Construção da Tensão", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_8.mp4" },
+      { id: "tt_9", title: "Clase 9 - Técnica de Liberação", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_9.mp4" },
+      { id: "tt_10", title: "Clase 10 - Orgasmo Multi-Nível", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_10.mp4" },
+      { id: "tt_11", title: "Clase 11 - Masterclass de Integração", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_11.mp4" }
     ]
   },
   {
@@ -55,10 +55,10 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #3d2b00 0%, #120c00 100%)",
     description: "O guia completo sem dor e com máximo prazer para ambos.",
     lessons: [
-      { id: "rey_1", title: "Clase 1 - O Código Inicial", type: "video", src: "VSLs_El_Secreto/EL_REY/Clase_1_-_Código_del_Sexo_Anal.mp4" },
-      { id: "rey_2", title: "Clase 2 - Relaxamento & Conforto", type: "video", src: "VSLs_El_Secreto/EL_REY/Clase_2_-_Código_del_Sexo_Anal.mp4" },
-      { id: "rey_3", title: "Clase 3 - Técnicas de Penetração", type: "video", src: "VSLs_El_Secreto/EL_REY/Clase_3_-_Código_del_Sexo_Anal.mp4" },
-      { id: "rey_pdf", title: "Guia PDF - Cómo Dar Placer a la Mujer", type: "pdf", src: "VSLs_El_Secreto/EL_REY/Como_Dar_Placer_en_el_Sexo_Anal.pdf" }
+      { id: "rey_1", title: "Clase 1 - O Código Inicial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_1_-_Codigo_del_Sexo_Anal.mp4" },
+      { id: "rey_2", title: "Clase 2 - Relaxamento & Conforto", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_2_-_Codigo_del_Sexo_Anal.mp4" },
+      { id: "rey_3", title: "Clase 3 - Técnicas de Penetração", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_3_-_Codigo_del_Sexo_Anal.mp4" },
+      { id: "rey_pdf", title: "Guia PDF - Cómo Dar Placer a la Mujer", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Como_Dar_Placer_en_el_Sexo_Anal.pdf" }
     ]
   },
   {
@@ -71,10 +71,10 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #102a45 0%, #030d17 100%)",
     description: "4 Guias práticos para criar o ambiente e o clima perfeito antes do ato.",
     lessons: [
-      { id: "clima_1", title: "Ambiente Perfecto - Deseo Perfecto", type: "pdf", src: "VSLs_El_Secreto/La_Formula_del_Clima_Ideal/Ambiente-Perfecto-Deseo-Perfecto.pdf" },
-      { id: "clima_2", title: "El Juego de las Sensaciones", type: "pdf", src: "VSLs_El_Secreto/La_Formula_del_Clima_Ideal/El-Juego-de-las-Sensaciones.pdf" },
-      { id: "clima_3", title: "El Poder del Contacto Inicial", type: "pdf", src: "VSLs_El_Secreto/La_Formula_del_Clima_Ideal/El-Poder-del-Contacto-Inicial.pdf" },
-      { id: "clima_4", title: "El Arte del Precalentamiento Emocional", type: "pdf", src: "VSLs_El_Secreto/La_Formula_del_Clima_Ideal/El-Arte-del-Precalentamiento-Emocional.pdf" }
+      { id: "clima_1", title: "Ambiente Perfecto - Deseo Perfecto", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__Ambiente-Perfecto-Deseo-Perfecto.pdf" },
+      { id: "clima_2", title: "El Juego de las Sensaciones", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__El-Juego-de-las-Sensaciones.pdf" },
+      { id: "clima_3", title: "El Poder del Contacto Inicial", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__El-Poder-del-Contacto-Inicial.pdf" },
+      { id: "clima_4", title: "El Arte del Precalentamiento Emocional", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__El-Arte-del-Precalentamiento-Emocional.pdf" }
     ]
   },
   {
@@ -87,8 +87,8 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #2d0047 0%, #0c0014 100%)",
     description: "Técnicas energéticas e de sintonia para criar atração magnética.",
     lessons: [
-      { id: "rit_1", title: "El Ritual de la Energía y la Sintonía", type: "pdf", src: "VSLs_El_Secreto/El_Ritual_Secreto/El-Ritual-de-la-Energia-y-la-Sintonia.pdf" },
-      { id: "rit_2", title: "Los Cuatro Elementos del Deseo", type: "pdf", src: "VSLs_El_Secreto/El_Ritual_Secreto/Los-Cuatro-Elementos-del-Deseo.pdf" }
+      { id: "rit_1", title: "El Ritual de la Energía y la Sintonía", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__El-Ritual-de-la-Energia-y-la-Sintonia.pdf" },
+      { id: "rit_2", title: "Los Cuatro Elementos del Deseo", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__Los-Cuatro-Elementos-del-Deseo.pdf" }
     ]
   },
   {
@@ -101,9 +101,9 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #00362b 0%, #00120e 100%)",
     description: "Biblioteca essencial com manuais de orgasmo, chá do desejo e técnicas de controle.",
     lessons: [
-      { id: "eb_1", title: "Té Del Deseo Infinito", type: "pdf", src: "VSLs_El_Secreto/E-BOOKS/Te Del Deseo Infinito.pdf" },
-      { id: "eb_2", title: "Mapa del Orgasmo Femenino", type: "pdf", src: "VSLs_El_Secreto/E-BOOKS/Mapa del Orgasmo.pdf" },
-      { id: "eb_3", title: "Manual Anti-Eyaculación Precoz", type: "pdf", src: "VSLs_El_Secreto/E-BOOKS/Manual AntiEyaculaciÃ³n.pdf" }
+      { id: "eb_1", title: "Té Del Deseo Infinito", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Te_Del_Deseo_Infinito.pdf" },
+      { id: "eb_2", title: "Mapa del Orgasmo Femenino", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Mapa_del_Orgasmo.pdf" },
+      { id: "eb_3", title: "Manual Anti-Eyaculación Precoz", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Manual_AntiEyaculaciA.n.pdf" }
     ]
   },
   {
@@ -116,8 +116,8 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #42031a 0%, #140007 100%)",
     description: "Técnicas de encerramento para garantir que ela fique viciada na sua presença.",
     lessons: [
-      { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "VSLs_El_Secreto/CIERRE/CLASE_1.mp4" },
-      { id: "cie_2", title: "Clase 2 - Âncora Emocional", type: "video", src: "VSLs_El_Secreto/CIERRE/CLASE_2.mp4" }
+      { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_1.mp4" },
+      { id: "cie_2", title: "Clase 2 - Âncora Emocional", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_2.mp4" }
     ]
   },
   {
@@ -130,7 +130,7 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #4d3300 0%, #1a1100 100%)",
     description: "Conteúdo bônus exclusivo para membros.",
     lessons: [
-      { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "VSLs_El_Secreto/BONO/BONIFICACIÓN_EXCLUSIVA.mp4" }
+      { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BONO__BONIFICACION_EXCLUSIVA.mp4" }
     ]
   },
   {
@@ -143,7 +143,7 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #1b0042 0%, #090017 100%)",
     description: "Vídeo completo do Combo Secreto.",
     lessons: [
-      { id: "combo_1", title: "Tienda Online - Guia de Produtos & Uso", type: "video", src: "VSLs_El_Secreto/COMBO_SECRETO/TIENDA_ONLINE.mp4" }
+      { id: "combo_1", title: "Tienda Online - Guia de Produtos & Uso", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COMBO_SECRETO__TIENDA_ONLINE.mp4" }
     ]
   },
   {
@@ -156,7 +156,7 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #3d0000 0%, #140000 100%)",
     description: "Manual de Alta Performance Sexual Masculina.",
     lessons: [
-      { id: "perf_1", title: "Guia Upsell 3 - Performance Máxima", type: "pdf", src: "VSLs_El_Secreto/PERFORMANCE_MAXIMO/Upsell 3- Performance Maxima.pdf" }
+      { id: "perf_1", title: "Guia Upsell 3 - Performance Máxima", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/PERFORMANCE_MAXIMO__Upsell_3-_Performance_Maxima.pdf" }
     ]
   },
   {
@@ -169,7 +169,7 @@ const COURSES_DATA = [
     bgGradient: "linear-gradient(135deg, #1c1c24 0%, #08080a 100%)",
     description: "Boas-vindas oficiais e introdução sobre como aproveitar a plataforma.",
     lessons: [
-      { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "VSLs_El_Secreto/BIENVENIDO_do_App/BIENVENIDO.mp4" }
+      { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
     ]
   }
 ];
