@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>El Secreto - Área de Membros VIP</title>
+  
+  <!-- SEO & PWA Meta -->
+  <meta name="description" content="Plataforma exclusiva de conteúdos, aulas e livros do programa El Secreto.">
+  <meta name="theme-color" content="#09090c">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+  
+  <!-- App Stylesheet -->
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="#" class="brand-logo">
+        <div class="brand-badge">S</div>
+        <div class="brand-info">
+          <h1>El Secreto</h1>
+          <p>Membros VIP</p>
+        </div>
+      </a>
+      <div class="user-status">
+        <span class="status-dot"></span>
+        <span>Acesso Garantido</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="app-container">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fa-solid fa-crown"></i>
+          <span>Plataforma Oficial</span>
+        </div>
+        <h2 class="hero-title">Bem-vindo à Sua Jornada</h2>
+        <p class="hero-desc">
+          Acesse todos os módulos em vídeo e livros exclusivos sem interrupção e com reprodução 100% nativa.
+        </p>
+        <div class="overall-progress-box">
+          <div class="progress-header">
+            <span>Progresso Geral dos Estudos</span>
+            <strong id="progressText">0 de 25 concluídas (0%)</strong>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="progressFill" class="progress-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Pesquisar aulas, módulos ou e-books...">
+      </div>
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">Todos</button>
+        <button class="tab-btn" data-filter="main">Cursos Principais</button>
+        <button class="tab-btn" data-filter="video">Vídeo Aulas</button>
+        <button class="tab-btn" data-filter="pdf">Material PDF</button>
+        <button class="tab-btn" data-filter="bonus">Bônus Exclusivos</button>
+      </div>
+    </div>
+
+    <!-- Catalogue Section -->
+    <h2 class="section-title">
+      <i class="fa-solid fa-layer-group" style="color: var(--accent-red);"></i>
+      Seus Módulos & Conteúdos
+    </h2>
+    <div id="productsGrid" class="products-grid">
+      <!-- Dynamically generated via app.js -->
+    </div>
+
+  </div>
+
+  <!-- Lesson / Video Player Modal Overlay -->
+  <div id="courseModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <h3 id="modalTitle">Nome do Curso</h3>
+          <p id="modalBadge">Módulo VIP</p>
+        </div>
+        <button class="close-btn" onclick="closeModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Player Container (Video or PDF) -->
+        <div id="playerBox">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Lessons List -->
+        <h4 style="font-size: 1rem; color: #fff; margin-bottom: 12px; font-weight: 700;">
+          Conteúdo do Módulo:
+        </h4>
+        <div id="modalLessonsList" class="lessons-list">
+          <!-- Rendered dynamically -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Mobile Navigation Bar -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-tab active">
+      <i class="fa-solid fa-house"></i>
+      <span>Início</span>
+    </a>
+    <a href="#" class="nav-tab">
+      <i class="fa-solid fa-play-circle"></i>
+      <span>Aulas</span>
+    </a>
+    <a href="#" class="nav-tab">
+      <i class="fa-solid fa-book-open"></i>
+      <span>E-Books</span>
+    </a>
+    <a href="#" class="nav-tab">
+      <i class="fa-solid fa-user-shield"></i>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>

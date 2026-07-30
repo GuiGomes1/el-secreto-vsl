@@ -1,0 +1,7 @@
+# Ignore large media files from main git commit (hosted in Releases instead)
+VSLs_El_Secreto/
+*.mp4
+*.ts
+*.wav
+node_modules/
+.DS_Store
