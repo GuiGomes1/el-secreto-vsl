@@ -1,5 +1,5 @@
 /* ==========================================================================
-   El Secreto - Ultra-Premium Netflix Cinema Engine (Photorealistic Covers)
+   El Secreto - Authentic Original Husky App Covers Engine
    ========================================================================== */
 
 const COURSES_DATA = [
@@ -12,7 +12,7 @@ const COURSES_DATA = [
     icon: "fa-play-circle",
     badge: "COMEÇAR POR AQUI",
     progressPct: 85,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__welcome.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__b506a207-c24d-4247-90a5-0c8762aefaa0.png",
     description: "Boas-vindas oficiais e introdução sobre como aproveitar ao máximo a plataforma.",
     lessons: [
       { id: "wel_1", title: "Vídeo de Boas-Vindas Oficial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BIENVENIDO_do_App__BIENVENIDO.mp4" }
@@ -27,7 +27,7 @@ const COURSES_DATA = [
     icon: "fa-fire",
     badge: "MÓDULO PRINCIPAL",
     progressPct: 40,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__revelando.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__fe8179ce-9c76-4c7f-8c2c-86fa20767d3b.png",
     description: "Dominando os segredos do prazer com técnicas passo a passo de toque e conexão.",
     lessons: [
       { id: "rev_0", title: "Bienvenido a Revelando El Placer", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/REVELANDO_EL_PLACER__BIENVENIDO.mp4" },
@@ -49,7 +49,7 @@ const COURSES_DATA = [
     icon: "fa-wand-magic-sparkles",
     badge: "MÓDULO AVANÇADO",
     progressPct: 15,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__teoria.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__4e7d894a-f2e1-4bd1-b2bf-d4c8e1ff7442.png",
     description: "Colocando a teoria na prática com demonstrações detalhadas e passo a passo.",
     lessons: [
       { id: "tt_3", title: "Clase 3 - Preparação Prática", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/DE_LA_TEORIA_AL_TOQUE__CLASE_3.mp4" },
@@ -72,7 +72,7 @@ const COURSES_DATA = [
     icon: "fa-crown",
     badge: "EL REY VIP",
     progressPct: 60,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__rey.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__bf20fb02-75a4-4387-8d61-2aadd75add8d.png",
     description: "O guia completo sem dor e com máximo prazer para ambos.",
     lessons: [
       { id: "rey_1", title: "Clase 1 - O Código Inicial", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/EL_REY__Clase_1_-_Codigo_del_Sexo_Anal.mp4" },
@@ -90,7 +90,7 @@ const COURSES_DATA = [
     icon: "fa-lock",
     badge: "CIERRE VIP",
     progressPct: 0,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__cierre.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__1b93c927-1f4f-4cc3-bbaf-4656da1e3872.png",
     description: "Técnicas de encerramento para garantir atração duradoura.",
     lessons: [
       { id: "cie_1", title: "Clase 1 - O Toque Final", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/CIERRE__CLASE_1.mp4" },
@@ -106,7 +106,7 @@ const COURSES_DATA = [
     icon: "fa-gift",
     badge: "BÔNUS EXCLUSIVO",
     progressPct: 100,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__bono.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__72f39b6b-308f-4bd7-b1aa-740de72f4df7.png",
     description: "Conteúdo bônus exclusivo para membros.",
     lessons: [
       { id: "bono_1", title: "Aula Bônus Exclusiva", type: "video", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/BONO__BONIFICACION_EXCLUSIVA.mp4" }
@@ -121,7 +121,7 @@ const COURSES_DATA = [
     icon: "fa-wine-glass",
     badge: "EL CLIMA IDEAL",
     progressPct: 50,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__clima.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__c9e72df5-93e4-41de-831a-2f247714cc39.png",
     description: "4 Guias práticos para criar o ambiente e o clima perfeito.",
     lessons: [
       { id: "clima_1", title: "Ambiente Perfecto - Deseo Perfecto", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/La_Formula_del_Clima_Ideal__Ambiente-Perfecto-Deseo-Perfecto.pdf" },
@@ -139,7 +139,7 @@ const COURSES_DATA = [
     icon: "fa-gem",
     badge: "RITUAL SECRETO",
     progressPct: 25,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__ritual.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__527fd86f-038b-4439-9d31-63789d065fb9.png",
     description: "Técnicas energéticas e de sintonia para atração magnética.",
     lessons: [
       { id: "rit_1", title: "El Ritual de la Energía y la Sintonía", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/El_Ritual_Secreto__El-Ritual-de-la-Energia-y-la-Sintonia.pdf" },
@@ -155,7 +155,7 @@ const COURSES_DATA = [
     icon: "fa-book-open",
     badge: "BIBLIOTECA VIP",
     progressPct: 70,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__ebooks.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__66706473-1e86-4a40-81ba-6b9e33f2342a.png",
     description: "Manuais de orgasmo, chá do desejo e técnicas de controle.",
     lessons: [
       { id: "eb_1", title: "Té Del Deseo Infinito", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/E-BOOKS__Te_Del_Deseo_Infinito.pdf" },
@@ -172,7 +172,7 @@ const COURSES_DATA = [
     icon: "fa-bolt",
     badge: "PERFORMANCE MÁXIMO",
     progressPct: 90,
-    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/COVER__performance.jpg",
+    coverImg: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__98bea0d7-e6ba-4b21-ac8c-549a16ad8e7c.png",
     description: "Manual de Alta Performance Sexual Masculina.",
     lessons: [
       { id: "perf_1", title: "Guia Upsell 3 - Performance Máxima", type: "pdf", src: "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/PERFORMANCE_MAXIMO__Upsell_3-_Performance_Maxima.pdf" }
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavbarScroll();
 });
 
-// Render Rows with Photorealistic Cover Art & Progress Bars
+// Render Rows with Authentic Husky App Cover Images
 function renderNetflixRows(searchQuery = '') {
   const rowMain = document.getElementById('rowMain');
   const rowBonus = document.getElementById('rowBonus');

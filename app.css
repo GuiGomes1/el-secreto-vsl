@@ -136,7 +136,9 @@ body {
   position: relative;
   height: 68vh;
   min-height: 460px;
-  background: linear-gradient(135deg, #400008 0%, #141414 100%);
+  background-image: url('https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__fe8179ce-9c76-4c7f-8c2c-86fa20767d3b.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   padding: 0 4%;
