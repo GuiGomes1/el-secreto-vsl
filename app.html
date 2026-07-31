@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>El Secreto | Netflix Cinema</title>
+  <title>El Secreto Femenino | Área de Miembros</title>
   
   <meta name="theme-color" content="#141414">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +19,16 @@
     <div class="nav-left">
       <a href="#" class="netflix-logo">EL SECRETO</a>
       <ul class="nav-menu">
-        <li><a class="nav-link active" onclick="filterRow('all')">Início</a></li>
+        <li><a class="nav-link active" onclick="filterRow('all')">Inicio</a></li>
         <li><a class="nav-link" onclick="filterRow('main')">Cursos</a></li>
-        <li><a class="nav-link" onclick="filterRow('bonus')">Bônus & VIP</a></li>
+        <li><a class="nav-link" onclick="filterRow('bonus')">Bonos & VIP</a></li>
         <li><a class="nav-link" onclick="filterRow('pdf')">E-Books</a></li>
       </ul>
     </div>
     <div class="nav-right">
       <div class="search-input-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="searchInput" placeholder="Pesquisar...">
+        <input type="text" id="searchInput" placeholder="Buscar...">
       </div>
     </div>
   </nav>
@@ -39,7 +39,7 @@
       <img src="https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/HERO_BANNER__top_banner.png" alt="Bienvenido a La Zona de Placer" class="top-banner-img">
       <div class="top-banner-overlay">
         <button class="btn-netflix btn-netflix-primary btn-banner-play" onclick="openCourseById('welcome_app'); event.stopPropagation();">
-          <i class="fa-solid fa-play"></i> Assistir Boas-Vindas
+          <i class="fa-solid fa-play"></i> Ver Bienvenida
         </button>
       </div>
     </div>
@@ -52,7 +52,7 @@
     <section class="row-section">
       <h3 class="row-title">
         <i class="fa-solid fa-trophy" style="color: var(--netflix-red);"></i>
-        Cursos Principais & Vídeo Aulas
+        Cursos Principales & Video Clases
       </h3>
       <div id="rowMain" class="row-slider"></div>
     </section>
@@ -61,7 +61,7 @@
     <section class="row-section">
       <h3 class="row-title">
         <i class="fa-solid fa-crown" style="color: var(--gold-accent);"></i>
-        Módulos VIP & Bônus Exclusivos
+        Módulos VIP & Bonos Exclusivos
       </h3>
       <div id="rowBonus" class="row-slider"></div>
     </section>
@@ -70,7 +70,7 @@
     <section class="row-section">
       <h3 class="row-title">
         <i class="fa-solid fa-book-open" style="color: #46d369;"></i>
-        Biblioteca de E-Books & Guias Práticos (PDF)
+        Biblioteca de E-Books & Guías Prácticas (PDF)
       </h3>
       <div id="rowPdf" class="row-slider"></div>
     </section>
@@ -93,7 +93,7 @@
         <p id="modalCourseDesc" style="color: #aaa; margin-top: 6px; font-size: 0.88rem;"></p>
 
         <h4 style="font-size: 1.05rem; color: #fff; margin-top: 20px; font-weight: 700;">
-          Aulas & Capítulos:
+          Clases & Capítulos:
         </h4>
         <div id="modalEpisodeList" class="episode-list"></div>
       </div>
@@ -104,7 +104,7 @@
   <nav class="bottom-app-bar">
     <a class="app-bar-item active" onclick="filterRow('all')">
       <i class="fa-solid fa-house"></i>
-      <span>Início</span>
+      <span>Inicio</span>
     </a>
     <a class="app-bar-item" onclick="filterRow('main')">
       <i class="fa-solid fa-play-circle"></i>
@@ -112,7 +112,7 @@
     </a>
     <a class="app-bar-item" onclick="filterRow('bonus')">
       <i class="fa-solid fa-gift"></i>
-      <span>Bônus</span>
+      <span>Bonos</span>
     </a>
     <a class="app-bar-item" onclick="filterRow('pdf')">
       <i class="fa-solid fa-book-open"></i>
