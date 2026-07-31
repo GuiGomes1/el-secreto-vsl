@@ -131,69 +131,52 @@ body {
   font-size: 0.8rem;
 }
 
-/* Billboard Hero */
-.billboard {
-  position: relative;
-  height: 68vh;
-  min-height: 460px;
-  background-image: url('https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/ORIGINAL_COVER__fe8179ce-9c76-4c7f-8c2c-86fa20767d3b.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
+/* Official Top Banner */
+.official-top-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 70px auto 20px auto;
   padding: 0 4%;
-  margin-bottom: 24px;
-  overflow: hidden;
 }
 
-.billboard-bg-glow {
+.top-banner-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-banner-img-wrap:hover {
+  transform: scale(1.01);
+  box-shadow: 0 16px 45px rgba(229, 9, 20, 0.4);
+  border-color: var(--netflix-red);
+}
+
+.top-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.top-banner-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 35%, rgba(229,9,20,0.35) 0%, transparent 65%);
-  pointer-events: none;
-}
-
-.billboard-content {
-  max-width: 680px;
-  z-index: 2;
-  margin-top: 30px;
-}
-
-.billboard-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--netflix-red);
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 3px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 14px;
-}
-
-.billboard-title {
-  font-family: var(--font-serif);
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 14px;
-  text-shadow: 2px 2px 14px rgba(0,0,0,0.9);
-}
-
-.billboard-desc {
-  font-size: 1.05rem;
-  color: #d2d2d2;
-  margin-bottom: 26px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
-}
-
-.billboard-actions {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.85) 100%);
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+.btn-banner-play {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  font-size: 1.05rem;
+  padding: 14px 28px;
 }
 
 .btn-netflix {

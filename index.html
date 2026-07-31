@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="app.css?v=7">
+  <link rel="stylesheet" href="app.css?v=9">
 </head>
 <body>
 
@@ -33,23 +33,13 @@
     </div>
   </nav>
 
-  <!-- Billboard Hero (Feature Showcase) -->
-  <header class="billboard">
-    <div class="billboard-bg-glow"></div>
-    <div class="billboard-content">
-      <div class="billboard-tag">
-        <i class="fa-solid fa-crown"></i> Comece Por Aqui
-      </div>
-      <h1 class="billboard-title">Bienvenido a El Secreto</h1>
-      <p class="billboard-desc">
-        Boas-vindas oficiais e introdução para você iniciar sua jornada com acesso completo a todos os módulos em vídeo e materiais exclusivos.
-      </p>
-      <div class="billboard-actions">
-        <button class="btn-netflix btn-netflix-primary" onclick="openCourseById('welcome_app')">
+  <!-- Official Top Banner -->
+  <header class="official-top-banner">
+    <div class="top-banner-img-wrap" onclick="openCourseById('welcome_app')">
+      <img src="https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/HERO_BANNER__top_banner.png" alt="Bienvenido a La Zona de Placer" class="top-banner-img">
+      <div class="top-banner-overlay">
+        <button class="btn-netflix btn-netflix-primary btn-banner-play" onclick="openCourseById('welcome_app'); event.stopPropagation();">
           <i class="fa-solid fa-play"></i> Assistir Boas-Vindas
-        </button>
-        <button class="btn-netflix btn-netflix-secondary" onclick="openCourseById('revelando_placer')">
-          <i class="fa-solid fa-fire"></i> Revelando El Placer
         </button>
       </div>
     </div>
@@ -130,6 +120,6 @@
     </a>
   </nav>
 
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>
