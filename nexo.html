@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Protocolo Nexo | Área de Membros Exclusiva</title>
     <meta name="description" content="Acesse todas as aulas do Protocolo Nexo com qualidade HD, controle de velocidade e conteúdo exclusivo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@
                 <span class="meta-tag duration">14 Aulas Práticas</span>
             </div>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="playLesson('NEXO__01_Boas_Vindas__Aula_1.mp4', 'Boas-vindas - Aula 1', 'Módulo 1: Boas-vindas')">
+                <button class="btn btn-primary" onclick="playLesson('NEXO__01_Boas_Vindas__Aula_1.mp4', 'Aula 1 - Boas-vindas e Introdução', 'Módulo 1: Boas-vindas')">
                     <span class="btn-icon">▶</span> Começar a Assistir
                 </button>
                 <button class="btn btn-secondary" onclick="scrollToElement('mod-2')">
@@ -76,7 +76,7 @@
                 <span class="module-count">1 Aula</span>
             </div>
             <div class="cards-grid">
-                <div class="card" onclick="playLesson('NEXO__01_Boas_Vindas__Aula_1.mp4', 'Aula 1: Boas-vindas', 'Módulo 1: Boas-vindas')">
+                <div class="card" onclick="playLesson('NEXO__01_Boas_Vindas__Aula_1.mp4', 'Aula 1 - Boas-vindas e Introdução', 'Módulo 1: Boas-vindas')">
                     <div class="card-thumb">
                         <div class="thumb-overlay">
                             <span class="play-btn-circle">▶</span>
@@ -310,6 +310,30 @@
 
     </main>
 
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="#hero" class="mobile-nav-item active" onclick="setActiveMobileNav(this)">
+            <span class="mobile-nav-icon">🏠</span>
+            <span class="mobile-nav-label">Início</span>
+        </a>
+        <a href="#mod-2" class="mobile-nav-item" onclick="setActiveMobileNav(this)">
+            <span class="mobile-nav-icon">🔥</span>
+            <span class="mobile-nav-label">Prazer</span>
+        </a>
+        <a href="#mod-3" class="mobile-nav-item" onclick="setActiveMobileNav(this)">
+            <span class="mobile-nav-icon">⚡</span>
+            <span class="mobile-nav-label">Prática</span>
+        </a>
+        <a href="#mod-4" class="mobile-nav-item" onclick="setActiveMobileNav(this)">
+            <span class="mobile-nav-icon">🎁</span>
+            <span class="mobile-nav-label">Bônus</span>
+        </a>
+        <a href="#mod-7" class="mobile-nav-item" onclick="setActiveMobileNav(this)">
+            <span class="mobile-nav-icon">📢</span>
+            <span class="mobile-nav-label">Avisos</span>
+        </a>
+    </nav>
+
     <!-- Video Modal Player -->
     <div class="modal-overlay" id="videoModal">
         <div class="modal-content">
@@ -321,7 +345,7 @@
                 </div>
             </div>
             <div class="video-player-container">
-                <video id="mainPlayer" controls controlsList="nodownload" preload="metadata" poster="">
+                <video id="mainPlayer" controls controlsList="nodownload" playsinline preload="metadata">
                     <source id="videoSource" src="" type="video/mp4">
                     Seu navegador não suporta a reprodução deste vídeo.
                 </video>
@@ -329,15 +353,17 @@
             <div class="player-controls-bar">
                 <div class="speed-controls">
                     <span class="speed-label">Velocidade:</span>
-                    <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
-                    <button class="speed-btn" onclick="setSpeed(1.25, this)">1.25x</button>
-                    <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
-                    <button class="speed-btn" onclick="setSpeed(2.0, this)">2.0x</button>
-                    <button class="speed-btn" onclick="setSpeed(3.0, this)">3.0x 🔥</button>
+                    <div class="speed-scroll-wrapper">
+                        <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                        <button class="speed-btn" onclick="setSpeed(1.25, this)">1.25x</button>
+                        <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+                        <button class="speed-btn" onclick="setSpeed(2.0, this)">2.0x</button>
+                        <button class="speed-btn" onclick="setSpeed(3.0, this)">3.0x 🔥</button>
+                    </div>
                 </div>
                 <div class="nav-episode-btns">
-                    <button class="ep-btn" id="prevEpBtn" onclick="prevEpisode()">← Aula Anterior</button>
-                    <button class="ep-btn" id="nextEpBtn" onclick="nextEpisode()">Próxima Aula →</button>
+                    <button class="ep-btn" id="prevEpBtn" onclick="prevEpisode()">← Anterior</button>
+                    <button class="ep-btn" id="nextEpBtn" onclick="nextEpisode()">Próxima →</button>
                 </div>
             </div>
         </div>

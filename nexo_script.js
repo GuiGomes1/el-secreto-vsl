@@ -122,6 +122,13 @@ function scrollToElement(id) {
     }
 }
 
+function setActiveMobileNav(element) {
+    document.querySelectorAll(".mobile-nav-item").forEach(item => item.classList.remove("active"));
+    if (element) {
+        element.classList.add("active");
+    }
+}
+
 // Search Filter
 document.getElementById("searchInput").addEventListener("input", function (e) {
     const query = e.target.value.toLowerCase().trim();
