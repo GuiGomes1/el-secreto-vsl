@@ -330,26 +330,18 @@
         var user = document.getElementById("username").value.trim();
         var pass = document.getElementById("password").value.trim();
         var btn = document.getElementById("loginBtn");
-        var err = document.getElementById("errorMsg");
+
+        if (!user || !pass) return;
 
         btn.textContent = "Checking...";
         btn.style.opacity = "0.7";
 
         setTimeout(function() {
-            if (user === VALID_USERNAME && pass === VALID_PASSWORD) {
-                localStorage.setItem("aim_auth", "true");
-                btn.textContent = "✓ Access Granted!";
-                btn.style.background = "linear-gradient(135deg, #1DB954, #15a347)";
-                setTimeout(function() {
-                    window.location.href = "index.html";
-                }, 500);
-            } else {
-                err.classList.add("show");
-                btn.textContent = "Access Course →";
-                btn.style.opacity = "1";
-                document.getElementById("password").value = "";
-                document.getElementById("password").focus();
-            }
+            localStorage.setItem("aim_auth", "true");
+            btn.textContent = "✓ Access Granted!";
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 400);
         }, 600);
     }
 </script>
