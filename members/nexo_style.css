@@ -7,9 +7,9 @@
     --bg-main: #0a0a0f;
     --bg-card: rgba(22, 22, 32, 0.75);
     --bg-card-hover: rgba(32, 32, 48, 0.95);
-    --accent-red: #E50914;
-    --accent-red-hover: #ff121d;
-    --accent-gold: #FFD700;
+    --accent-red: #1DB954; /* Spotify / Suno Neon Green */
+    --accent-red-hover: #1ed760;
+    --accent-gold: #00bcff; /* Cyber blue */
     --text-primary: #ffffff;
     --text-secondary: #a0a0b0;
     --text-muted: #6e6e80;

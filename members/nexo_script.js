@@ -1,21 +1,30 @@
-// Protocolo Nexo - JavaScript Interactive Controller
+// AI Music Academy - Interactive Player Script
 
+// GitHub release media base URL
 const githubReleaseBase = "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/";
 
-// Video playlist mapping
+// Video playlist mapping (English AI Music classes)
 const playlist = [
-    { id: "NEXO__01_Boas_Vindas__Aula_1.mp4", title: "Aula 1 - Boas-vindas e Introdução", module: "Módulo 1: Boas-vindas" },
-    { id: "NEXO__02_Prazer_Feminino__Aula_1.mp4", title: "Aula 1 - Os Fundamentos do Prazer", module: "Módulo 2: Desvendando o Prazer Feminino" },
-    { id: "NEXO__02_Prazer_Feminino__Aula_2.mp4", title: "Aula 2 - Zonas de Alta Sensibilidade", module: "Módulo 2: Desvendando o Prazer Feminino" },
-    { id: "NEXO__02_Prazer_Feminino__Aula_3.mp4", title: "Aula 3 - Conexão Psicológica e Emocional", module: "Módulo 2: Desvendando o Prazer Feminino" },
-    { id: "NEXO__02_Prazer_Feminino__Aula_4.mp4", title: "Aula 4 - Ritmo e Progressão", module: "Módulo 2: Desvendando o Prazer Feminino" },
-    { id: "NEXO__03_Teoria_ao_Toque__Aula_1.mp4", title: "Aula 1 - Técnicas de Toque Inicial", module: "Módulo 3: Da Teoria ao Toque" },
-    { id: "NEXO__03_Teoria_ao_Toque__Aula_2.mp4", title: "Aula 2 - Pressão e Variação Tátil", module: "Módulo 3: Da Teoria ao Toque" },
-    { id: "NEXO__03_Teoria_ao_Toque__Aula_3.mp4", title: "Aula 3 - Sequência de Estimulação Completa", module: "Módulo 3: Da Teoria ao Toque" },
-    { id: "NEXO__03_Teoria_ao_Toque__Aula_4.mp4", title: "Aula 4 - Onde e Como Manter o Clímax", module: "Módulo 3: Da Teoria ao Toque" },
-    { id: "NEXO__03_Teoria_ao_Toque__Aula_5.mp4", title: "Aula 5 - Finalização e Pós-Sensação", module: "Módulo 3: Da Teoria ao Toque" },
-    { id: "NEXO__04_Bonus__Aula_1.mp4", title: "Bônus Exclusivo - Segredos Complementares", module: "Módulo 4: Bônus Exclusivo" },
-    { id: "NEXO__05_Encerramento__Aula_1.mp4", title: "Aula de Encerramento e Próximos Passos", module: "Módulo 5: Encerramento" }
+    { 
+        id: "class_1_ai_music.mp4", 
+        title: "Class 1: How to ACTUALLY Make Money With AI Music", 
+        module: "Module 1: The Blueprint" 
+    },
+    { 
+        id: "class_2_make_songs.mp4", 
+        title: "Class 2: Make Hit Songs with AI (Suno & Udio)", 
+        module: "Module 2: Creation Mastery" 
+    },
+    { 
+        id: "class_3_ai_voices.mp4", 
+        title: "Class 3: Custom AI Voices & Vocal Cloning", 
+        module: "Module 3: Vocal Technology" 
+    },
+    { 
+        id: "class_4_monetization.mp4", 
+        title: "Class 4: Music Distribution & Scale", 
+        module: "Module 4: Monetization & Scaling" 
+    }
 ];
 
 let currentIndex = 0;
@@ -74,6 +83,7 @@ function prevEpisode() {
     }
 }
 
+// Next Episode
 function nextEpisode() {
     if (currentIndex < playlist.length - 1) {
         currentIndex++;
@@ -82,36 +92,12 @@ function nextEpisode() {
     }
 }
 
+// Update previous / next button state
 function updateNavBtns() {
     const prevBtn = document.getElementById("prevEpBtn");
     const nextBtn = document.getElementById("nextEpBtn");
     prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
     nextBtn.style.opacity = currentIndex === playlist.length - 1 ? "0.4" : "1";
-}
-
-// Open Lightbox Image
-function openImage(filename, title) {
-    const modal = document.getElementById("imageModal");
-    const img = document.getElementById("lightboxImage");
-    const titleEl = document.getElementById("imageModalTitle");
-    const dlBtn = document.getElementById("imageDownloadBtn");
-
-    const fullUrl = githubReleaseBase + filename;
-    img.src = fullUrl;
-    titleEl.textContent = title;
-    dlBtn.href = fullUrl;
-
-    modal.classList.add("active");
-}
-
-function closeImageModal() {
-    document.getElementById("imageModal").classList.remove("active");
-}
-
-// Open PDF document
-function openDoc(filename, title) {
-    const fullUrl = githubReleaseBase + filename;
-    window.open(fullUrl, '_blank');
 }
 
 // Scroll helper
@@ -147,7 +133,5 @@ document.getElementById("searchInput").addEventListener("input", function (e) {
 // Close modals when clicking outside content
 window.addEventListener("click", function (e) {
     const videoModal = document.getElementById("videoModal");
-    const imageModal = document.getElementById("imageModal");
     if (e.target === videoModal) closeVideoModal();
-    if (e.target === imageModal) closeImageModal();
 });
