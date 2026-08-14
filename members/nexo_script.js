@@ -3,6 +3,12 @@
 // GitHub release media base URL
 const githubReleaseBase = "https://github.com/GuiGomes1/el-secreto-vsl/releases/download/v1.0.0/";
 
+// Logout
+function logout() {
+    localStorage.removeItem("aim_auth");
+    window.location.replace("login.html");
+}
+
 // Video playlist mapping (English AI Music classes)
 const playlist = [
     { 

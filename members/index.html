@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="nexo_style.css">
 </head>
 <body>
+    <script>
+        // Auth guard — redirect to login if not authenticated
+        if (localStorage.getItem("aim_auth") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
     <!-- Top Navbar -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
@@ -31,9 +37,10 @@
                     <span class="search-icon">🔍</span>
                     <input type="text" id="searchInput" placeholder="Search class or module...">
                 </div>
-                <div class="user-profile">
+                <div class="user-profile" style="display:flex;align-items:center;gap:10px;">
                     <div class="avatar">AM</div>
                     <span class="user-badge">VIP</span>
+                    <button onclick="logout()" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:#aaa;font-size:12px;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,71,87,0.15)';this.style.color='#ff4757'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.color='#aaa'">Logout</button>
                 </div>
             </div>
         </div>
@@ -168,6 +175,27 @@
                             <span class="card-action">Watch Now →</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="module-section" id="support" style="border-top:1px solid rgba(255,255,255,0.06);margin-top:12px;">
+            <div class="module-header">
+                <h2 class="module-title"><span class="mod-num" style="background:linear-gradient(135deg,#00bcff,#0080ff);">💬</span> Support</h2>
+            </div>
+            <div style="padding:32px;background:rgba(18,18,30,0.7);border-radius:16px;border:1px solid rgba(255,255,255,0.06);display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;">
+                <div>
+                    <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">Need Help?</h3>
+                    <p style="color:#8a8a9a;font-size:14px;max-width:400px;line-height:1.6;">Our support team is available to assist you with any questions about the course content, access issues, or technical problems.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <a href="mailto:support@nationalwinners.online" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1DB954,#15a347);color:#000;font-weight:700;font-size:14px;padding:12px 24px;border-radius:12px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        📧 Email Support
+                    </a>
+                    <a href="https://wa.me/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);color:#25d366;font-weight:700;font-size:14px;padding:12px 24px;border-radius:12px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='rgba(37,211,102,0.2)'" onmouseout="this.style.background='rgba(37,211,102,0.12)'">
+                        💬 WhatsApp Support
+                    </a>
                 </div>
             </div>
         </section>
